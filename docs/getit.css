@@ -1,0 +1,262 @@
+/*
+Algumas informações úteis e dicas:
+  - Fontes disponíveis:
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Permanent Marker', cursive;
+  - Cores:
+    Tons de amarelo:
+      #e4fc2b
+      #e0d426
+      #f7d736
+      #e0af26
+      #fcb02b
+    Tons de cinza:
+      #2c2c2c
+      #4c4c4c
+    Cores dos cards:
+      #ead3a7
+      #9de0f5
+      #ef89ba
+      #fae890
+      #abe9c1
+  - Sombra: https://codepen.io/sdthornton/pen/wBZdXq
+ */
+
+/* html,
+body {
+  font-family: "Roboto", sans-serif;
+} */
+
+/* Você pode usar o CSS comentado abaixo, se ajudar */
+/* Fonte: https://codepen.io/CrisWoler/pen/ogXBLj */
+/* .btn {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+
+  background-color: #f7d736;
+
+  transition: background-color 0.3s;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn:before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 0;
+  padding-top: 0;
+
+  border-radius: 100%;
+
+  background-color: rgba(236, 240, 241, 0.3);
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+
+  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
+} */
+
+/* Reset básico para consistência de estilos entre navegadores */
+
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4; /* Adapte para a cor de fundo da imagem */
+
+
+}
+
+.appbar {
+  background-color: #ffd700; /* Cor de fundo da barra de aplicativos */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  /* O tamanho do logo deve ser ajustado conforme necessário */
+  height: 50px;
+  margin-right: 20px;
+}
+
+.subtitle {
+  color: #333; /* Cor do subtítulo */
+  font-size: 24px; /* Tamanho do subtítulo */
+}
+
+.container {
+  display: flex; /* Adiciona flexbox */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente (se desejar) */
+  flex-direction: column; /* Organiza os itens em coluna */
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+
+.form-card {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  width: 60%; /* Largura do formulário */
+  
+
+}
+
+.form-card input[type="text"],
+.form-card textarea[name="titulo"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 0px solid #ddd;
+  border-radius: 4px;
+  font-size: 30px; /* Tamanho da fonte dos inputs */
+}
+
+.form-card textarea[name="detalhes"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 0px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px; /* Tamanho da fonte dos inputs */
+}
+
+
+.form-card button.btn {
+  background-color: #ffc800; /* Cor do botão */
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Tamanho da fonte do botão */
+  width: 100%;
+  
+
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+   /* Cor de fundo dos cartões */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  width: calc(20% - 20px); /* 5 cartões por linha com espaçamento */
+  margin-bottom: 20px;
+  transform: rotate(5deg);
+}
+
+.card-title {
+  color: black;
+  font-size: 20px; /* Tamanho da fonte do título */
+  font-family: 'Permanent Marker', cursive;
+  padding: 10px 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-content {
+  font-family: 'Permanent Marker', cursive;
+  padding: 20px;
+  font-size: 16px; /* Tamanho da fonte do conteúdo */
+  color: #333; /* Cor do texto do conteúdo */
+}
+
+.card-color-1 {
+  background-color: #ead3a7; /* Cor do cartão 1 */
+}
+.card-color-2 {
+  background-color: #9de0f5; /* Cor do cartão 2 */
+}
+
+.card-color-3 {
+  background-color: #ef89ba; /* Cor do cartão 3 */
+}
+
+.card-color-4 {
+  background-color: #fae890; /* Cor do cartão 4 */
+}
+
+.card-color-5 {
+  background-color: #abe9c1; /* Cor do cartão 5 */
+}
+
+.card-rotation-1 {
+  transform: rotate(-5deg);
+}
+
+.card-rotation-2 {
+  transform: rotate(-4deg);
+}
+
+.card-rotation-3 {
+  transform: rotate(-3deg);
+}
+
+.card-rotation-4 {
+  transform: rotate(-2deg);
+}
+
+.card-rotation-5 {
+  transform: rotate(-1deg);
+}
+
+.card-rotation-6 {
+  transform: rotate(1deg);
+}
+
+.card-rotation-7 {
+  transform: rotate(2deg);
+}
+
+.card-rotation-8 {
+  transform: rotate(3deg);
+}
+
+.card-rotation-9 {
+  transform: rotate(4deg);
+}
+
+.card-rotation-10 {
+  transform: rotate(5deg);
+}
+
+.card-rotation-11 {
+  transform: rotate(0deg);
+}
+
